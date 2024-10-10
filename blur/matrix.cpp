@@ -7,6 +7,7 @@ Author: David Holmqvist <daae19@student.bth.se>
 #include <fstream>
 #include <stdexcept>
 
+/* Initializes a Matrix with provided RGB data pointers and image dimensions */
 Matrix::Matrix(unsigned char* R, unsigned char* G, unsigned char* B, unsigned x_size, unsigned y_size, unsigned color_max)
     : R { R }
     , G { G }
@@ -17,6 +18,7 @@ Matrix::Matrix(unsigned char* R, unsigned char* G, unsigned char* B, unsigned x_
 {
 }
 
+/* Default constructor */
 Matrix::Matrix()
     : Matrix {
         nullptr,
@@ -29,6 +31,7 @@ Matrix::Matrix()
 {
 }
 
+/* Constructs a square matrix (dimension x dimension) and allocates memory for the RGB channels */
 Matrix::Matrix(unsigned dimension)
     : R { new unsigned char[dimension * dimension] }
     , G { new unsigned char[dimension * dimension] }
@@ -39,6 +42,7 @@ Matrix::Matrix(unsigned dimension)
 {
 }
 
+/* Copy constructor that creates a new Matrix by duplicating the RGB data from another Matrix. It allocates new memory and copies the pixel values. */
 Matrix::Matrix(const Matrix& other)
     : R { new unsigned char[other.x_size * other.y_size] }
     , G { new unsigned char[other.x_size * other.y_size] }
@@ -59,12 +63,14 @@ Matrix::Matrix(const Matrix& other)
     }
 }
 
+/* Overloads the assignment operator to copy the contents of one Matrix to another. It handles self-assignment, releases existing resources, and allocates new memory for the RGB data. */
 Matrix& Matrix::operator=(const Matrix other)
 {
     if (this == &other) {
         return *this;
     }
 
+    /* explicitly calls the destructor of the current object (this) */
     this->~Matrix();
 
     R = new unsigned char[other.x_size * other.y_size];
@@ -89,10 +95,12 @@ Matrix& Matrix::operator=(const Matrix other)
     return *this;
 }
 
+/* Cleans up allocated memory for the RGB channels when a Matrix object is destroyed. It sets the RGB pointers to nullptr and resets dimensions.
+ */
 Matrix::~Matrix()
 {
     if (R) {
-        delete[] R;
+        delete[] R; // Used for freeing memory allocated for an array of objects.
         R = nullptr;
     }
     if (G) {
@@ -122,6 +130,7 @@ unsigned Matrix::get_color_max() const
     return color_max;
 }
 
+/* Return constant pointers to the RGB data */
 unsigned char const* Matrix::get_R() const
 {
     return R;
@@ -137,6 +146,8 @@ unsigned char const* Matrix::get_B() const
     return B;
 }
 
+/* Return the red, green, or blue value at the specified pixel coordinates (x, y) */
+/* read-only */
 unsigned char Matrix::r(unsigned x, unsigned y) const
 {
     return R[y * x_size + x];
@@ -152,6 +163,8 @@ unsigned char Matrix::b(unsigned x, unsigned y) const
     return B[y * x_size + x];
 }
 
+/* Return the red, green, or blue value at the specified pixel coordinates (x, y) */
+/* read and write */
 unsigned char& Matrix::r(unsigned x, unsigned y)
 {
     return R[y * x_size + x];

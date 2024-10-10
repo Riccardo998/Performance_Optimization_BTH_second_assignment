@@ -10,6 +10,7 @@ Author: David Holmqvist <daae19@student.bth.se>
 
 namespace PPM {
 
+/* Open filename and store its contents to a stream */
 void Reader::fill(std::string filename)
 {
     std::ifstream f {};
@@ -29,15 +30,18 @@ void Reader::fill(std::string filename)
     f.close();
 }
 
+/* Obtain magic number from the file */
 std::string Reader::get_magic_number()
 {
     std::string magic {};
 
+    /*Extracts characters from is and stores them into str until the newline character, '\n', is found */
     std::getline(stream, magic);
 
     return magic;
 }
 
+/* Skips comments in the stream and reads the image's width and height using regex to ensure the format is correct. */
 std::pair<unsigned, unsigned> Reader::get_dimensions()
 {
     std::string line {};
@@ -57,6 +61,7 @@ std::pair<unsigned, unsigned> Reader::get_dimensions()
     }
 }
 
+/* Reads the maximum color value from the next line in the stream */
 unsigned Reader::get_color_max()
 {
     std::string line {};
@@ -75,6 +80,7 @@ unsigned Reader::get_color_max()
     }
 }
 
+/* Reads the pixel data (RGB values) for the image. It allocates memory for the red, green, and blue channels, and fills them by reading from the stream */
 std::tuple<unsigned char*, unsigned char*, unsigned char*> Reader::get_data(unsigned x_size, unsigned y_size)
 {
     auto size { x_size * y_size };
@@ -99,6 +105,8 @@ std::tuple<unsigned char*, unsigned char*, unsigned char*> Reader::get_data(unsi
     return { reinterpret_cast<unsigned char*>(R), reinterpret_cast<unsigned char*>(G), reinterpret_cast<unsigned char*>(B) };
 }
 
+/* Main function to read the PPM image. It orchestrates the process by calling the other methods, handling errors, and returning a Matrix object representing the image.
+ */
 Matrix Reader::operator()(std::string filename)
 {
     try {
@@ -146,12 +154,13 @@ Matrix Reader::operator()(std::string filename)
         return Matrix {};
     }
 }
-
+/* Error handling */
 void error(std::string op, std::string what)
 {
     std::cerr << "Encountered PPM error during " << op << ": " << what << std::endl;
 }
 
+/* Writes a Matrix object (which represents an image) to a PPM file. It constructs the file with the appropriate headers (magic number, dimensions, and color max) and writes the RGB data */
 void Writer::operator()(Matrix m, std::string filename)
 {
     try {

@@ -1,5 +1,33 @@
 #!/bin/bash
 # Author: David Holmqvist <daae19@student.bth.se>
+ 
+# 1. The script is designed to test and compare the output of two different image processing programs: a sequential version (`blur`) and a parallel version (`blur_par`) that performs image blurring.
+# 
+# 2. Here's the breakdown of its functionality:
+# 
+# - Creates a temporary directory to store intermediate results
+# - Sets up color coding for error messages (red text)
+# - Runs two nested loops:
+#   - Outer loop iterates through different thread counts (1, 2, 4, 8, 16, 32)
+#   - Inner loop iterates through different input images (im1, im2, im3, im4)
+# 
+# 3. For each combination of thread count and image, it:
+# - Runs the sequential blur program (`blur`) with blur radius 15
+# - Runs the parallel blur program (`blur_par`) with the same parameters and specified thread count
+# - Compares the output files using `cmp` to ensure they're identical
+# - If the outputs differ, prints an error message in red
+# - Cleans up temporary files after comparison
+# 
+# 4. The script acts as a verification tool to ensure that the parallel implementation produces exactly the same results as the sequential version across different thread counts.
+# 
+# The key purpose appears to be quality assurance - making sure the parallel implementation doesn't introduce any differences in the output compared to the sequential version, regardless of how many threads are used.
+# 
+# If any comparison fails, the script will exit with status code 1 (indicating error); otherwise, it exits with 0 (success).
+# 
+# Note that this script assumes:
+# - The existence of programs named `blur` and `blur_par` in the current directory
+# - Input images exist in a `data/` directory with `.ppm` format
+# - The user has permission to create temporary directories and files
 
 echo "NOTE: this script relies on the binaries blur, blur_par, threshold and threshold_par to exist"
 

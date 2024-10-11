@@ -73,17 +73,20 @@ double Vector::mean() const
     return sum / static_cast<double>(size);
 }
 
+/* The square root of the sum of the squares of the components gives the magnitude (or length) of the vector */
+/* we are returning the square root of the dot product this x this */
 double Vector::magnitude() const
 {
     auto dot_prod{dot(*this)};
     return std::sqrt(dot_prod);
 }
 
+/* Divide each element of the vector by div */
 Vector Vector::operator/(double div)
 {
-    auto result{*this};
+    auto result{*this}; // copy the vector
 
-    for (auto i{0}; i < size; i++)
+    for (auto i{0}; i < size; i++) 
     {
         result[i] /= div;
     }
@@ -91,6 +94,7 @@ Vector Vector::operator/(double div)
     return result;
 }
 
+/* Subtract sub from each element of the vector */
 Vector Vector::operator-(double sub)
 {
     auto result{*this};
@@ -103,6 +107,7 @@ Vector Vector::operator-(double sub)
     return result;
 }
 
+/* Dot product */
 double Vector::dot(Vector rhs) const
 {
     double result{0};

@@ -16,7 +16,7 @@ std::vector<double> correlation_coefficients(std::vector<Vector> datasets)
     std::vector<double> result {};
 
     for (auto sample1 { 0 }; sample1 < datasets.size() - 1; sample1++) {
-        for (auto sample2 { sample1 + 1 }; sample2 < datasets.size(); sample2++) {
+        for (auto sample2 { sample1 + 1 }; sample2 < datasets.size(); sample2++) { // avoid repeating pairs of rows
             auto corr { pearson(datasets[sample1], datasets[sample2]) };
             result.push_back(corr);
         }

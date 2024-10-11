@@ -14,10 +14,11 @@ Author: David Holmqvist <daae19@student.bth.se>
 
 namespace Dataset
 {
+    /* Read dataset from filename, store each floating point in a dimension x dimension matrix */
     std::vector<Vector> read(std::string filename)
     {
-        unsigned dimension{};
-        std::vector<Vector> result{};
+        unsigned dimension{}; // store how many numbers each vector contains
+        std::vector<Vector> result{}; // dynamic list of Vectors --> vector of Vectors --> a dimension x dimenstion matrix
         std::ifstream f{};
 
         f.open(filename);
@@ -35,9 +36,11 @@ namespace Dataset
 
         while (std::getline(f, line))
         {
-            std::stringstream ss{line};
-            Vector new_vec{dimension};
-            std::copy_n(std::istream_iterator<double>{ss},
+            std::stringstream ss{line}; //create a stream from the line (makes it easier to parse numbers)
+            Vector new_vec{dimension};  // empty Vector of dimension elements
+
+            /* std::copy_n(InputIterator first, Size n, OutputIterator result) */
+            std::copy_n(std::istream_iterator<double>{ss}, // creates an iterator that reads doubles from the stringstream
                         dimension,
                         new_vec.get_data());
             result.push_back(new_vec);
@@ -46,6 +49,7 @@ namespace Dataset
         return result;
     }
 
+    /* write the vector data to filename */
     void write(std::vector<double> data, std::string filename)
     {
         std::ofstream f{};

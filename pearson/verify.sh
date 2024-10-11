@@ -1,6 +1,10 @@
 #!/bin/bash
 # Author: David Holmqvist <daae19@student.bth.se>
 
+# The script tests the outputs of two programs (pearson and pearson_par) on different input data sizes and thread counts.
+# It compares the results to check if the parallel version produces the same output as the sequential version.
+# If a mismatch is found, it prints an error message in red and exits with a non-zero status
+
 echo "NOTE: this script relies on the binaries pearson and pearson_par to exist"
 
 status=0

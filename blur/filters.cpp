@@ -43,6 +43,9 @@ namespace Filter
             {
                 /* Kernel creation */
                 // TODO create a vector of radius lenght instead of maximum_length
+
+                // TODO Leo told me to look at where get_weights is called
+            
                 double w[Gauss::max_radius]{}; // Note: max_radius is defined in filters.hpp
                 Gauss::get_weights(radius, w);
 

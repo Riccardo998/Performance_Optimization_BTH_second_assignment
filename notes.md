@@ -1,14 +1,35 @@
 # c++ stuff
-**auto**: c++ keyword, assumes the type of whatever I happen to assign to it!
-
+- **auto**: c++ keyword, assumes the type of whatever I happen to assign to it!
 - std::vector<> is a **container class** in the C++ Standard Library that implements a **dynamic array**.
 - std::vector<> allows for fast random access to its elements using the subscript operator ([]), just like arrays. This makes it convenient to use when you need to quickly access individual elements.
 - *std::vector* is a template class, meaning it can store any type of data. You need to specify the type of elements the vector will hold when you declare it.
 - **namespaces** are packages (sets of functions)
 
-## compiler flags
-- add **Ofast** to the CXXFLAGS (https://stackoverflow.com/questions/45685487/what-does-clangs-ofast-option-do-in-practical-terms-especially-for-any-diffe)
+# Performance metrics
+## Flamegraphs
+- perf record --call-graph dwarf -- ./blur 15 data/im4.ppm data/blurred_im4.ppm
+- perf record --call-graph dwarf -- ./pearson data/128.data data/128_pearson.data;
+- hotspot perf.data
 
+## Pidstat
+- pidstat -u -d -r -h -I 1 -e ./blur/blur 15 blur/data/im1.ppm blur/data/blurred_im1.ppm > pidstat_output/pidstat_blur_im1_15.txt
+
+> pidstat non mostra i dati di lettura / scrittura
+> stiamo scrivendo dati nell'ordine dei MB, è probabile che la lettura e scrittura di questi files sia talmente veloce che sia in between intervals
+
+
+# Optimization
+## compiler flags
+- add **Ofast** to the CXXFLAGS 
+- https://gcc.gnu.org/onlinedocs/gcc-3.4.6/gcc/Optimize-Options.html
+- https://stackoverflow.com/questions/45685487/what-does-clangs-ofast-option-do-in-practical-terms-especially-for-any-diffe
+- -Ofast adds to the -O3 optimizations: 
+    -fno-signed-zeros 
+    -freciprocal-math 
+    -ffp-contract=fast 
+    -menable-unsafe-fp-math 
+    -menable-no-nans 
+    -menable-no-infs 
 
 # PPM images
 https://netpbm.sourceforge.net/doc/ppm.html
@@ -65,3 +86,7 @@ for (auto sample1{0}; sample1 < dataset.size() - 1; sample1++){
     for (auto sample2 { sample1 + 1 }; sample2 < datasets.size(); sample2++) {
 }
 ```
+
+
+
+

@@ -1,0 +1,1 @@
+Linux 6.11.3-arch1-1 (archdaniele) 	10/14/2024 	_x86_64_	(8 CPU)

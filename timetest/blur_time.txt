@@ -1,0 +1,35 @@
+Test #1
+Execution time:
+im1.ppm:   0.69 s
+im2.ppm:   1.47 s
+im3.ppm:   2.49 s
+im4.ppm:  15.10 s
+
+Test #2 
+Execution time:
+im1.ppm:   0.72 s
+im2.ppm:   1.54 s
+im3.ppm:   2.43 s
+im4.ppm:  25.79 s
+
+Test #3
+Execution time:
+im1.ppm:   0.75 s
+im2.ppm:   1.32 s
+im3.ppm:   2.78 s
+im4.ppm:  17.40 s
+
+Test #4
+Execution time:
+im1.ppm:   0.74 s
+im2.ppm:   1.57 s
+im3.ppm:   2.59 s
+im4.ppm:  17.58 s
+
+Test #5 
+Execution time:
+im1.ppm:   0.63 s
+im2.ppm:   1.37 s
+im3.ppm:   2.84 s
+im4.ppm:  15.77 s
+

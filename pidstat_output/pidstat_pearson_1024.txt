@@ -1,0 +1,98 @@
+Linux 6.11.3-arch1-1 (archdaniele) 	10/14/2024 	_x86_64_	(8 CPU)
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:51 PM  1000    185472   99.00    0.00    0.00    0.00   12.41     3   4337.00      0.00   23080   20356   0.13      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:52 PM  1000    185472  100.00    0.00    0.00    0.00   12.53     3    113.00      0.00   23336   20380   0.13      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:53 PM  1000    185472  100.00    0.00    0.00    0.00   12.53     3    176.00      0.00   23848   20636   0.13      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:54 PM  1000    185472   99.00    0.00    0.00    0.00   12.38     3     48.00      0.00   23848   20764   0.13      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:55 PM  1000    185472  100.00    0.00    0.00    0.00   12.45     3     47.00      0.00   23848   21020   0.13      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:56 PM  1000    185472  100.00    0.00    0.00    0.00   12.53     7     32.00      0.00   24872   22060   0.14      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:57 PM  1000    185472  100.00    0.00    0.00    0.00   12.50     7      0.00      0.00   24872   22060   0.14      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:58 PM  1000    185472  100.00    0.00    0.00    0.00   12.52     7      0.00      0.00   24872   22060   0.14      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:32:59 PM  1000    185472  100.00    0.00    0.00    0.00   12.55     7      0.00      0.00   24872   22060   0.14      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:00 PM  1000    185472  100.00    0.00    0.00    0.00   12.52     7      0.00      0.00   24872   22060   0.14      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:01 PM  1000    185472   99.00    0.00    0.00    0.00   12.42     7      0.00      0.00   24872   22060   0.14      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:02 PM  1000    185472  100.00    0.00    0.00    0.00   12.58     7      3.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:03 PM  1000    185472  100.00    0.00    0.00    0.00   12.55     7      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:04 PM  1000    185472   99.00    0.00    0.00    0.00   12.42     7      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:05 PM  1000    185472  100.00    0.00    0.00    0.00   12.55     7      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:06 PM  1000    185472  100.00    0.00    0.00    0.00   12.56     7      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:07 PM  1000    185472   99.00    0.00    0.00    0.00   12.45     3      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:08 PM  1000    185472  100.00    0.00    0.00    0.00   12.63     3      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:09 PM  1000    185472  100.00    0.00    0.00    0.00   12.47     2      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:10 PM  1000    185472   99.00    0.00    0.00    0.00   12.47     2      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:11 PM  1000    185472  100.00    0.00    0.00    0.00   12.58     1      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:12 PM  1000    185472  100.00    0.00    0.00    0.00   12.52     1      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:13 PM  1000    185472  100.00    0.00    0.00    0.00   12.53     1      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:14 PM  1000    185472  100.00    0.00    0.00    0.00   12.55     1      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:15 PM  1000    185472  100.00    0.00    0.00    0.00   12.52     1      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:16 PM  1000    185472   99.00    0.00    0.00    0.00   12.41     6      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:17 PM  1000    185472  100.00    0.00    0.00    0.00   12.52     2      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:18 PM  1000    185472  100.00    0.00    0.00    0.00   12.52     2      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:19 PM  1000    185472  100.00    0.00    0.00    0.00   12.53     2      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:20 PM  1000    185472  100.00    0.00    0.00    0.00   12.53     2      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:21 PM  1000    185472  100.00    0.00    0.00    0.00   12.61     6      0.00      0.00   26920   24112   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+02:33:22 PM  1000    185472   81.00   19.00    0.00    0.00   12.53     6      4.00      0.00   22840   20032   0.12      0.00   3356.00      0.00       0  pearson
+

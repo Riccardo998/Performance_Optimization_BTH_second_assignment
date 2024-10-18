@@ -35,17 +35,21 @@ namespace Filter
         Matrix scratch{PPM::max_dimension};
         auto dst{m}; // dst = destination
 
+        // DEBUG
+        // FILE* outputFile = fopen("output_image_baseline.txt", "w");
+        // if (!outputFile) {
+        //     printf("Failed to open the file for writing.\n");
+        //     return dst;
+        // }
+
         /* Horizontal pass */
         /* The algorithm processes each pixel row by row, applying the Gaussian weights to the horizontal neighbors */
+        // fprintf(outputFile, "Horizontal pass\n");
         for (auto x{0}; x < dst.get_x_size(); x++)
         {
             for (auto y{0}; y < dst.get_y_size(); y++)
             {
                 /* Kernel creation */
-                // TODO create a vector of radius lenght instead of maximum_length
-
-                // TODO Leo told me to look at where get_weights is called
-            
                 double w[Gauss::max_radius]{}; // Note: max_radius is defined in filters.hpp
                 Gauss::get_weights(radius, w);
 
@@ -86,6 +90,7 @@ namespace Filter
                 scratch.r(x, y) = r / n;
                 scratch.g(x, y) = g / n;
                 scratch.b(x, y) = b / n;
+                //fprintf(outputFile, "Pixel %d,%d: R = %d, G = %d, B = %d\n", x, y, scratch.r(x, y), scratch.g(x, y), scratch.b(x, y));
             }
         }
         /* Vertical pass */
@@ -122,9 +127,10 @@ namespace Filter
                 dst.r(x, y) = r / n;
                 dst.g(x, y) = g / n;
                 dst.b(x, y) = b / n;
+                // fprintf(outputFile, "Pixel %d,%d: R = %d, G = %d, B = %d\n", x, y, dst.r(x, y), dst.g(x, y), dst.b(x, y));
             }
         }
-
+        //fclose(outputFile);
         return dst;
     }
 

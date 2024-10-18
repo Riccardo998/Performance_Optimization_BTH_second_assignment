@@ -6,6 +6,12 @@
 - **namespaces** are packages (sets of functions)
 
 # Performance metrics
+
+## Execution time
+- max precision: ms
+- TIMEFORMAT='%4R'; time (./blur/blur 15 ./blur/data/im3.ppm blurred_im3.ppm)
+
+
 ## Flamegraphs
 - perf record --call-graph dwarf -- ./blur 15 data/im4.ppm data/blurred_im4.ppm
 - perf record --call-graph dwarf -- ./pearson data/128.data data/128_pearson.data;
@@ -30,6 +36,27 @@
     -menable-unsafe-fp-math 
     -menable-no-nans 
     -menable-no-infs 
+
+## loop unrolling Riccardo
+## m256d-registers
+- https://ark.intel.com/content/www/us/en/ark/products/92986/intel-xeon-processor-e5-2620-v4-20m-cache-2-10-ghz.html
+- https://www.intel.com/content/www/us/en/products/sku/149091/intel-core-i78565u-processor-8m-cache-up-to-4-60-ghz/specifications.html
+- the processor must be compatible with **AVX2 Instruction set extension**
+- https://stackoverflow.com/questions/12875325/using-m256d-registers
+
+
+This optimized version uses AVX2 intrinsics to perform SIMD operations on 4 double-precision floating-point values at once. Here are the key optimizations:
+
+We use __m256d vectors to process 4 pixels simultaneously in both horizontal and vertical passes.
+The _mm256_fmadd_pd intrinsic is used for fused multiply-add operations, which can be faster than separate multiply and add instructions on many processors.
+We've separated the horizontal and vertical passes to improve cache locality.
+The inner loops now process 8 pixels at a time (4 in each SIMD vector for r, g, and b).
+We use aligned memory access where possible (alignas(32) for the weights array) to improve memory access efficiency.
+
+Note that this optimization assumes that the Matrix class allows direct access to its data via the r(), g(), and b() methods. If this is not the case, you may need to modify the code to work with your specific Matrix implementation.
+**Also, keep in mind that this optimization may require additional error handling for edge cases, such as when the image dimensions are not multiples of 8. You might need to add cleanup code to handle these edge cases.**
+Lastly, remember to compile with AVX2 support enabled (e.g., -mavx2 flag for GCC or Clang) to use these intrinsics.
+Would you like me to explain any part of this optimization in more detail?
 
 # PPM images
 https://netpbm.sourceforge.net/doc/ppm.html

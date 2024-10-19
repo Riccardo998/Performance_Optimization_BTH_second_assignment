@@ -82,7 +82,7 @@ double Vector::magnitude() const
 }
 
 
-Vector Vector::operator/(double div)
+Vector Vector::operator/(double div) const
 {
     auto result{*this}; 
 
@@ -105,7 +105,7 @@ Vector Vector::operator/(double div)
 
 
 
-Vector Vector::operator-(double sub)
+Vector Vector::operator-(double sub) const
 {
     Vector result(size);
     unsigned i = 0;
@@ -125,22 +125,22 @@ Vector Vector::operator-(double sub)
     return result; // Return the new vector with the subtracted values
 }
 
-
-double Vector::dot(Vector rhs) const
+double Vector::dot(const Vector& rhs) const
+//double Vector::dot(Vector rhs)
 {
     double result{0};
     unsigned i = 0;
 
     // Loop unrolling for dot product
     for (; i + 4 <= size; i += 4) {
-        result += data[i] * rhs[i];
-        result += data[i + 1] * rhs[i + 1];
-        result += data[i + 2] * rhs[i + 2];
-        result += data[i + 3] * rhs[i + 3];
+        result += data[i] * rhs.data[i];
+        result += data[i + 1] * rhs.data[i + 1];
+        result += data[i + 2] * rhs.data[i + 2];
+        result += data[i + 3] * rhs.data[i + 3];
     }
     // Handle remaining elements
     for (; i < size; ++i) {
-        result += data[i] * rhs[i];
+        result += data[i] * rhs.data[i];
     }
 
     return result; // Return the computed dot product

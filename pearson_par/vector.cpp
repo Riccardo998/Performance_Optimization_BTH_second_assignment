@@ -81,41 +81,68 @@ double Vector::magnitude() const
     return std::sqrt(dot_prod);
 }
 
-/* Divide each element of the vector by div */
-Vector Vector::operator/(double div)
-{
-    auto result{*this}; // copy the vector
 
-    for (auto i{0}; i < size; i++) 
-    {
+Vector Vector::operator/(double div) const
+{
+    auto result{*this}; 
+
+    unsigned i = 0;
+
+    // Loop unrolling 
+    for (; i + 4 <= size; i += 4) {
+        result[i] /= div;
+        result[i + 1] /= div;
+        result[i + 2] /= div;
+        result[i + 3] /= div;
+    }
+    // remaining elements
+    for (; i < size; ++i) {
         result[i] /= div;
     }
 
-    return result;
+    return result; // Return the new vector
 }
 
-/* Subtract sub from each element of the vector */
-Vector Vector::operator-(double sub)
-{
-    auto result{*this};
 
-    for (auto i{0}; i < size; i++)
-    {
-        result[i] -= sub;
+
+Vector Vector::operator-(double sub) const
+{
+    Vector result(size);
+    unsigned i = 0;
+
+    // Loop unrolling for subtraction
+    for (; i + 4 <= size; i += 4) {
+        result[i] = data[i] - sub;
+        result[i + 1] = data[i + 1] - sub;
+        result[i + 2] = data[i + 2] - sub;
+        result[i + 3] = data[i + 3] - sub;
+    }
+    // Handle remaining elements
+    for (; i < size; ++i) {
+        result[i] = data[i] - sub;
     }
 
-    return result;
+    return result; // Return the new vector with the subtracted values
 }
 
-/* Dot product */
-double Vector::dot(Vector rhs) const
+double Vector::dot(const Vector& rhs) const
+//double Vector::dot(Vector rhs)
 {
     double result{0};
+    unsigned i = 0;
 
-    for (auto i{0}; i < size; i++)
-    {
-        result += data[i] * rhs[i];
+    // Loop unrolling for dot product
+    for (; i + 4 <= size; i += 4) {
+        result += data[i] * rhs.data[i];
+        result += data[i + 1] * rhs.data[i + 1];
+        result += data[i + 2] * rhs.data[i + 2];
+        result += data[i + 3] * rhs.data[i + 3];
+    }
+    // Handle remaining elements
+    for (; i < size; ++i) {
+        result += data[i] * rhs.data[i];
     }
 
-    return result;
+    return result; // Return the computed dot product
 }
+

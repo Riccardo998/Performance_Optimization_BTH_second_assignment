@@ -117,3 +117,22 @@ for (auto sample1{0}; sample1 < dataset.size() - 1; sample1++){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Pearson
+To avoid the costly copying of datasets, you should pass it by const reference.
+
+std::vector<double> correlation_coefficients(const std::vector<Vector>& datasets);

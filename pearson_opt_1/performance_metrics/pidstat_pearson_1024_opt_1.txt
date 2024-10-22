@@ -1,0 +1,14 @@
+Linux 6.11.4-arch1-1 (archdaniele) 	10/22/2024 	_x86_64_	(8 CPU)
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+06:34:08 PM  1000    268459   99.00    0.00    0.00    0.00   12.39     3   4713.00      0.00   23840   21040   0.13      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+06:34:09 PM  1000    268459  100.00    0.00    0.00    0.00   12.53     3     37.00      0.00   24864   22316   0.14      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+06:34:10 PM  1000    268459  100.00    0.00    0.00    0.00   12.55     3      3.00      0.00   26912   24368   0.15      0.00      0.00      0.00       0  pearson
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+06:34:11 PM  1000    268459   92.00    8.00    0.00    0.00   12.50     3      4.00      0.00   22832   20292   0.13      0.00   1932.00      0.00       0  pearson
+

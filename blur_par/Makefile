@@ -1,15 +1,12 @@
 # Author: David Holmqvist <daae19@student.bth.se>
 
 CXX=g++
-CXXFLAGS=-std=c++17 -g -Wunused -Wall -Wunused
+CXXFLAGS=-O3 -pthread -std=c++17 -g -Wunused -Wall -Wunused 
 
-all: blur_par threshold
+all: blur
 
-threshold: matrix ppm filters threshold.cpp
-	$(CXX) $(CXXFLAGS) threshold.cpp matrix.o ppm.o filters.o -o threshold
-
-blur_par: matrix ppm filters blur.cpp
-	$(CXX) $(CXXFLAGS) blur.cpp matrix.o ppm.o filters.o -o blur_par
+blur: matrix ppm filters blur.cpp
+	$(CXX) $(CXXFLAGS) blur.cpp matrix.o ppm.o filters.o -o blur
 
 filters: matrix filters.hpp filters.cpp
 	$(CXX) $(CXXFLAGS) -c filters.cpp -o filters.o
@@ -21,4 +18,4 @@ ppm: ppm.hpp ppm.cpp
 	$(CXX) $(CXXFLAGS) -c ppm.cpp -o ppm.o
 
 clean:
-	rm -rf blur_par threshold *.ppm *.o *.dSYM 2> /dev/null
+	rm -rf blur *.ppm *.o *.dSYM 2> /dev/null

@@ -1,0 +1,23 @@
+Linux 6.11.4-arch1-1 (archdaniele) 	10/22/2024 	_x86_64_	(8 CPU)
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:54:07 PM  1000    147752   98.00    1.00    0.00    0.00   12.44     1   7072.00      0.00  144724  135836   0.84      0.00      0.00      0.00       0  blur
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:54:08 PM  1000    147752   99.00    0.00    0.00    0.00   12.36     1      0.00      0.00  144724  135836   0.84      0.00      0.00      0.00       0  blur
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:54:09 PM  1000    147752  100.00    0.00    0.00    0.00   12.53     1      0.00      0.00  144724  135836   0.84      0.00      0.00      0.00       0  blur
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:54:10 PM  1000    147752  100.00    0.00    0.00    0.00   12.52     1      0.00      0.00  144724  135836   0.84      0.00      0.00      0.00       0  blur
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:54:11 PM  1000    147752  100.00    0.00    0.00    0.00   12.50     1      0.00      0.00  144724  135836   0.84      0.00      0.00      0.00       0  blur
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:54:12 PM  1000    147752  100.00    0.00    0.00    0.00   12.53     1      0.00      0.00  144724  135836   0.84      0.00      0.00      0.00       0  blur
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:54:13 PM  1000    147752  100.00    0.00    0.00    0.00   12.50     5      0.00      0.00  144724  135836   0.84      0.00      0.00      0.00       0  blur
+

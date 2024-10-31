@@ -1,0 +1,33 @@
+Execution time:
+im1.ppm:
+0.451s
+0.472s
+0.446s
+0.452s
+0.484s
+Average: .461s
+
+im2.ppm:
+0.983s
+1.004s
+0.923s
+0.997s
+1.015s
+Average: .984s
+
+im3.ppm:
+1.769s
+1.884s
+1.794s
+1.855s
+2.218s
+Average: 1.904s
+
+im4.ppm:
+13.198s
+12.800s
+11.400s
+10.634s
+11.581s
+Average: 11.922s
+

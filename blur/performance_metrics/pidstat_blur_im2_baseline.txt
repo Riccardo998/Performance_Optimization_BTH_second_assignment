@@ -1,0 +1,5 @@
+Linux 6.11.4-arch1-1 (archdaniele) 	10/22/2024 	_x86_64_	(8 CPU)
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+03:48:12 PM  1000    142426   99.00    0.00    0.00    0.00   12.38     1   2916.00      0.00   46328   29628   0.18      0.00      0.00      0.00       0  blur
+

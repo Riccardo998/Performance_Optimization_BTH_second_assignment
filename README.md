@@ -1,3 +1,1 @@
-# dv1674_a2
-This is the baseline code for the second assignment of the DV1674 course.
-The corresponding assignment description can be found in Canvas.
+This is the implementation of Riccardo Storchi and Daniele Gagni of the second assignment for the DV1674 Performance Optimization course at Blekinge Institute of Technology.
